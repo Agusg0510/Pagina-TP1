@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista ABM</title>
+    <script type="text/javascript" src="ABMfunction.js" defer></script>
+    <link rel="stylesheet" href="stylesABM.css">
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.replace('login.html');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button id="logout-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>
+            <span>Cerrar Sesión</span>
+        </button>
+        <div class="todo-app">
+            <h2>Lista de tareas</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Añada una tarea">
+                <button id="add" onclick="addTask()">Agregar</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">Tarea 1</li>
+                <li>Tarea 2</li>
+                <li>Tarea 3</li> -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
